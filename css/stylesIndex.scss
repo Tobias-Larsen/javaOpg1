@@ -1,53 +1,10 @@
-* { /* Gælder alt på hele siden */
-  box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen, padding mv. */
-}
-
-/* Ovenstående kode kan give problemer ved nogle 3. parts scripts man henter. Men det gør det nemmere at forstå og lave kodning når man starter. */
-
-html {
-  overflow-y: scroll;
-}
-
-body {
-  margin: 0; /* Ingen kanter i siden af browser */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; /* Ingen ydre margen fra overskrifter */
-  padding: 0; /* Ingen indre margen fra overskrifter */
-}
-
-ul, ol {
-  margin: 2px 10px 2px 10px; /* Mindre margen på punkter */
-  padding: 0; /* Ingen indre margen fra lister */
-  list-style-position: inside; /* List punkter står på linje */
-}
-
-li {
-  margin: 0; /* Ingen ydre margen fra listpunkter */
-}
-
-p {
-  margin: 0; /* Ingen ydre margen fra paragraffer */
-  padding: 0; /* Ingen indre margen fra paragraffer */
-}
-
-/* Sikrer billeder er responsive */
-img {
-  display: block; /* Billeder er et element (laver linjeskift) */
-  max-width: 100%; /* Bredde må maks fylde 100% */
-  height: auto; /* Højden skal tilpasse sig */
-}
-
-:root {
-  --primary: #04a1bf;
-  --primary-dark: #025F70;
-  --secondary: #cd4ebc;
-  --secondary-dark: #7c3271;
-  --highlight: #FFCD5D;
-  --green: #21bc44;
-  --white: #fff;
-}
+$primary: #04a1bf;
+$primary-dark: #025F70;
+$secondary: #cd4ebc;
+$secondary-dark: #7c3271;
+$highlight: #FFCD5D;
+$green: #21bc44;
+$white: #fff;
 
 * {
   box-sizing: border-box;
@@ -56,10 +13,10 @@ img {
 body {
   margin: 0;
   padding: 10px;
-  background: var(--primary);
+  background: $primary;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #FFF;
+  color: $white;
 }
 
 .container{
@@ -80,7 +37,7 @@ body {
 }
 
 #inputArea input:focus {
-  outline-color: var(--highlight);
+  outline-color: $highlight;
   outline-offset: -2px;
 }
 
@@ -90,15 +47,15 @@ body {
   border: none;
   padding: 15px 15px;
   border-radius: 5px;
-  color: var(--white);
-  background-color: #025F70;
+  color: $white;
+  background-color: $primary-dark;
   transition: all 0.2s ease;
   margin-left: 5px;
 }
 
 #inputArea button:hover{
-  background-color: var(--primary-dark);
-  color: var(--highlight);
+  background-color: $primary-dark;
+  color: $highlight;
 }
 
 ul{
@@ -117,29 +74,61 @@ li {
   align-items: center;
   list-style: none;
   padding: 10px 20px;
-  border: 1px solid var(--secondary-dark);
+  border: 1px solid $secondary-dark;
   border-radius: 5px;
   margin-bottom: 10px;
-  background: var(--secondary);
+  background: $secondary;
   transition: all 0.75s ease;
 }
 
 li:hover {
-  background: var(--secondary-dark);
+  background: $secondary-dark;
 }
 
 li i:hover{
   transition: all 0.2s ease;
-  color: var(--highlight);
+  color: $highlight;
 }
 
 .done {
-  background: var(--green) !important;
-  border-color: var(--green);
+  background: $green !important;
+  border-color: $green;
 }
 
 .delete {
   display: none;
+}
+
+dialog{
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20px);
+  max-width: 500px;
+  border: none;
+  border-radius: 5px;
+}
+
+.dialog-button-group button{
+  color: $white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.dialog-button-group button:focus{
+  outline-color: $highlight;
+}
+
+.dialog-button--false{
+  background: $primary;
+}
+
+.dialog-button--true{
+  background: $secondary;
+}
+
+dialog::backdrop{
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 

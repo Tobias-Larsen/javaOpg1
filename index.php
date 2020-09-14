@@ -17,7 +17,7 @@
     <meta name="copyright" content="Information om copyright">
 
     <!--    Bootstrap css-->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/stylesIndex.min.css" rel="stylesheet" type="text/css">
@@ -48,7 +48,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!--<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
 <script type="module" src="js/app.js">
 
     document.querySelectorAll(".box > h1").forEach((box) => {
