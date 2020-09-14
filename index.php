@@ -22,6 +22,9 @@
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/stylesIndex.min.css" rel="stylesheet" type="text/css">
 
+<!--    fontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -32,32 +35,25 @@
 <!-- Her skal sidens indhold ligge -->
 
     <div class="container">
-        <div class="box d-flex justify-content-center align-items-center">
-            <h1 class="text-white">I'm .box</h1>
+        <i class="fas fa-list-ul fa-2x"></i>
+        <h1>To-do App</h1>
+
+        <div id="inputArea">
+            <input type="text" placeholder="New item...">
+            <button><i class="fas fa-pencil-alt"></i></button>
         </div>
 
-        <br><br>
-
-        <div class="box d-flex justify-content-center align-items-center">
-            <h1 class="text-white">I'm also .box</h1>
-        </div>
+        <ul id="toDoList"></ul>
     </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+<script type="module" src="js/app.js">
 
-    $(function () {
-
+    document.querySelectorAll(".box > h1").forEach((box) => {
+        box.textContent = "New text";
     });
-
-    //Vanilla JS
-    const jsBox = document.querySelector(".box");
-    const jsBox2 = document.querySelectorAll(".box");
-
-    console.log(jsBox);
-    console.log(jsBox2);
 
 </script>
 </body>
