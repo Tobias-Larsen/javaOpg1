@@ -1,4 +1,4 @@
-import LocalStorage from "../localStorage.js";
+import LocalStorage from "./localStorage.js";
 import dialog from "./dialog.js";
 import Dialog from "./dialog";
 
