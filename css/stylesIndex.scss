@@ -26,36 +26,36 @@ body {
 
 #inputArea{
   display: flex;
-}
 
-#inputArea input {
-  flex: 1 1 auto;
-  width: 100%;
-  border-radius: 5px;
-  padding: 15px;
-  border: none;
-}
+  input {
+    flex: 1 1 auto;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
 
-#inputArea input:focus {
-  outline-color: $highlight;
-  outline-offset: -2px;
-}
+    &:focus {
+      outline-color: $highlight;
+      outline-offset: -2px;
+    }
 
-#inputArea button {
-  flex: 0 1 50px;
-  cursor: pointer;
-  border: none;
-  padding: 15px 15px;
-  border-radius: 5px;
-  color: $white;
-  background-color: $primary-dark;
-  transition: all 0.2s ease;
-  margin-left: 5px;
-}
+    button {
+      flex: 0 1 50px;
+      cursor: pointer;
+      border: none;
+      padding: 15px 15px;
+      border-radius: 5px;
+      color: $white;
+      background-color: $primary-dark;
+      transition: all 0.2s ease;
+      margin-left: 5px;
 
-#inputArea button:hover{
-  background-color: $primary-dark;
-  color: $highlight;
+      &:hover{
+        background-color: $primary-dark;
+        color: $highlight;
+      }
+    }
+  }
 }
 
 ul{
@@ -79,15 +79,15 @@ li {
   margin-bottom: 10px;
   background: $secondary;
   transition: all 0.75s ease;
-}
 
-li:hover {
-  background: $secondary-dark;
-}
+  &:hover{
+    background: $secondary-dark;
+  }
 
-li i:hover{
-  transition: all 0.2s ease;
-  color: $highlight;
+  i:hover{
+    transition: all 0.2s ease;
+    color: $highlight;
+  }
 }
 
 .done {
@@ -106,6 +106,10 @@ dialog{
   max-width: 500px;
   border: none;
   border-radius: 5px;
+
+  &::backdrop{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .dialog-button-group button{
@@ -113,11 +117,12 @@ dialog{
   border: none;
   padding: 10px 30px;
   border-radius: 5px;
+
+  &:focus{
+    outline-color: $highlight;
+  }
 }
 
-.dialog-button-group button:focus{
-  outline-color: $highlight;
-}
 
 .dialog-button--false{
   background: $primary;
@@ -127,9 +132,6 @@ dialog{
   background: $secondary;
 }
 
-dialog::backdrop{
-  background-color: rgba(0, 0, 0, 0.6);
-}
 
 
 
