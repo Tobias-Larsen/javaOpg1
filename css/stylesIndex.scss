@@ -38,22 +38,22 @@ body {
       outline-color: $highlight;
       outline-offset: -2px;
     }
+  }
 
-    button {
-      flex: 0 1 50px;
-      cursor: pointer;
-      border: none;
-      padding: 15px 15px;
-      border-radius: 5px;
-      color: $white;
+  button {
+    flex: 0 1 50px;
+    cursor: pointer;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    color: $white;
+    background-color: $primary-dark;
+    transition: all 0.2s ease;
+    margin-left: 5px;
+
+    &:hover{
       background-color: $primary-dark;
-      transition: all 0.2s ease;
-      margin-left: 5px;
-
-      &:hover{
-        background-color: $primary-dark;
-        color: $highlight;
-      }
+      color: $highlight;
     }
   }
 }
